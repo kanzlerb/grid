@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
-from DXFClass import *
-from GRIDClass import *
+from class_dxf import *
+from class_grid import *
 
-def main():
-    dxf_file                = "dxf_files/screwhead.dxf"
+def main(file):
+    dxf_file                = file
     mesh_density            = 0.5
     contour_density_factor  = 3
     dxf                     = DXF(dxf_file, mesh_density, contour_density_factor)

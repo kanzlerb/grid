@@ -177,19 +177,19 @@ class DXF:
                     self.contours.remove(other_contour)
             self.connected_contours.append(np.array(curr_contour))
             
-def plot_connected_contours(contours):
-    plt.figure()
-    for contour in contours:
-        plt.plot(contour[:, 0], contour[:, 1])
-    plt.xlabel('X')
-    plt.ylabel('Y')
-    plt.title('Connected Contours (2D)')
-    plt.grid(True)
-    plt.axis('equal')
-    plt.show()
+    def plot_connected_contours(self):
+        plt.figure()
+        for contour in self.contours:
+            plt.plot(contour[:, 0], contour[:, 1])
+        plt.xlabel('X')
+        plt.ylabel('Y')
+        plt.title('Connected Contours (2D)')
+        plt.grid(True)
+        plt.axis('equal')
+        plt.show()
 
 # Beispielaufruf mit Toleranz
-test_dxf_file = "dxf_files/test_pcb_1.dxf"
-dxf = DXF(test_dxf_file, mesh_density=1.0, contour_density_factor=1.0)
-plot_connected_contours(dxf.connected_contours)
+# test_dxf_file = "dxf_files/test_pcb_1.dxf"
+# dxf = DXF(test_dxf_file, mesh_density=1.0, contour_density_factor=1.0)
+# plot_connected_contours(dxf.connected_contours)
 

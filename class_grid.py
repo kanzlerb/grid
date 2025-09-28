@@ -1,5 +1,5 @@
 import numpy as np
-from DXFClass import *
+from class_dxf import *
 
 class GRID:
     """
@@ -66,14 +66,14 @@ class GRID:
         return odd == 1
     
 # Beispielaufruf
-test_dxf_file = "dxf_files/test_pcb_1.dxf"
-dxf = DXF(test_dxf_file, mesh_density=1.0, contour_density_factor=1.0)
-grid = GRID(dxf.bbox, dxf.nx, dxf.ny, dxf.connected_contours)
-plt.figure()
-plt.plot(grid.grid[:, 0], grid.grid[:, 1])
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.title('Connected Contours (2D)')
-plt.grid(True)
-plt.axis('equal')
-plt.show()
+# test_dxf_file = "dxf_files/test_pcb_1.dxf"
+# dxf = DXF(test_dxf_file, mesh_density=1.0, contour_density_factor=1.0)
+# grid = GRID(dxf.bbox, dxf.nx, dxf.ny, dxf.connected_contours)
+# plt.figure()
+# plt.plot(grid.grid[:, 0], grid.grid[:, 1])
+# plt.xlabel('X')
+# plt.ylabel('Y')
+# plt.title('Connected Contours (2D)')
+# plt.grid(True)
+# plt.axis('equal')
+# plt.show()
